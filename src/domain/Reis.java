@@ -1,5 +1,7 @@
 package domain;
 
+import domain.stappen.Autorit;
+
 import java.util.*;
 
 public class Reis {
@@ -66,4 +68,35 @@ public class Reis {
         return shortest;
     }
 
+    public String getBeginStad() {
+        return beginStad;
+    }
+
+    public void setBeginStad(String beginStad) {
+        this.beginStad = beginStad;
+    }
+
+    public String getEindStad() {
+        return eindStad;
+    }
+
+    public void setEindStad(String eindStad) {
+        this.eindStad = eindStad;
+    }
+
+    public Map<Stap, Integer> getStappen() {
+        return stappen;
+    }
+
+    public void setStappen(Map<Stap, Integer> stappen) {
+        this.stappen = stappen;
+    }
+
+    public Map<Stap, Integer> getReis() {
+        return reis;
+    }
+
+    public void setReis(Map<Stap, Integer> reis) {
+        this.reis = reis;
+    }
 }
