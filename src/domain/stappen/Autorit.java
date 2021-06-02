@@ -1,15 +1,23 @@
 package domain.stappen;
 
-import domain.Locatie;
 import domain.Stap;
 
 public class Autorit extends Stap {
+    private int kilometers;
 
-    private int kosten;
-
-    public Autorit(Locatie puntA, Locatie puntB, int kosten) {
-        super(puntA, puntB);
-
+    public Autorit(String naam, String puntA, String puntB, int kostenEuros) {
+        super(naam, puntA, puntB);
+        this.kilometers = kostenEuros;
     }
 
+    public int getKilometers() {
+        return kilometers;
+    }
+
+    @Override
+    public String toString() {
+        return "Autorit { " +
+                "kilometers=" + kilometers +
+                '}';
+    }
 }
