@@ -46,7 +46,7 @@ public class Reis {
         Map<Stap, Integer> mogelijkeStappen = new HashMap<>();
         for (Stap key:
                 this.stappen.keySet()) {
-            if (key.getpuntA() == CurrentPosition || key.getpuntB() == CurrentPosition) {
+            if (key.getpuntA().equals(CurrentPosition) || key.getpuntB().equals(CurrentPosition)) {
                 if (!reis.containsKey(key)) {
                     mogelijkeStappen.put(key, this.stappen.get(key));
                 }
@@ -99,4 +99,5 @@ public class Reis {
     public void setReis(Map<Stap, Integer> reis) {
         this.reis = reis;
     }
+
 }
